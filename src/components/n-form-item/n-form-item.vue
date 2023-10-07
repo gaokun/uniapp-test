@@ -1,5 +1,7 @@
 <template>
-  <c-form-item></c-form-item>
+  <c-form-item>
+    <slot></slot>
+  </c-form-item>
 </template>
 
 <script setup lang="ts"></script>

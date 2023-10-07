@@ -1,7 +1,6 @@
 <template>
   <view>
-	  <!-- <view v-for="text in list" :key="text">{{text}}</view> -->
-    <slot></slot>
+	  <view v-for="text in list" :key="text">{{text}}</view>
   </view>
 </template>
 
@@ -15,19 +14,19 @@ const list: string[] = [];
 function print(ins: any) {
   const type = ins?.vnode?.type;
   const name = type?.name ?? type?.__name;
-  console.log(`c-form-item vnode name =`, name);
+  console.log(`child vnode name =`, name);
   list.push(name);
 
   if (ins?.parent) print(ins?.parent);
 }
 
-// print(instance);
+print(instance);
 	
 
 </script>
 
 <script lang="ts">
 export default {
-  name: 'c-form-item',
+  name: 'n-child',
 };
 </script>

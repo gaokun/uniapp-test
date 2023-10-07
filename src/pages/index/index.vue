@@ -4,17 +4,17 @@
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
-	<n-form>
-		<n-form-item>
-			form-item-content
-		</n-form-item>
-	</n-form>
+    <n-form>
+      <n-form-item>
+        <n-child>child</n-child>
+      </n-form-item>
+    </n-form>
   </view>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Hello')
+import { ref } from "vue";
+const title = ref("Hello");
 </script>
 
 <style>
